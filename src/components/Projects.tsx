@@ -41,6 +41,7 @@ export default function Projects() {
     <>
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>
         <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-light">My Work</span>
+        <p className="mt-2 text-sm text-gray-500">A collection of real-world projects showcasing problem-solving, software engineering, artificial intelligence, and full-stack development.</p>
         </motion.div>
         <motion.div
           initial={{ opacity: 0, y: 16 }}

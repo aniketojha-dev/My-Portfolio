@@ -46,7 +46,8 @@ export default function About() {
           transition={{ duration: 0.5, delay: 0.15 }}
           className="mt-2"
         >
-          <p className="text-base font-semibold text-gray-200 sm:text-lg">Software Developer &middot; AI/ML Engineer</p>
+          <p className="text-base font-semibold text-gray-200 sm:text-lg">Software Developer</p>
+        <p className="text-base font-semibold text-gray-200/80 sm:text-lg">AI/ML Engineer</p>
         </motion.div>
 
         <motion.div

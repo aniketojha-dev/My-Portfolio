@@ -28,6 +28,7 @@ export default function Certifications() {
     <>
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>
         <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-light">Certifications</span>
+        <p className="mt-2 text-sm text-gray-500">Professional certifications and achievements</p>
       </motion.div>
       <motion.div
         initial={{ opacity: 0, y: 16 }}

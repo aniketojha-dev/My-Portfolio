@@ -75,6 +75,7 @@ export default function Education() {
     <>
       <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>
         <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-light">Academic Background</span>
+        <p className="mt-2 text-sm text-gray-500">My academic journey and performance across semesters</p>
       </motion.div>
 
       <motion.div
