@@ -2,7 +2,7 @@
 
 Personal portfolio built with **React**, **TypeScript**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**.
 
-🔗 **Live Demo:** [my-portfolio-fawn-seven-7t53f3byt5.vercel.app](https://my-portfolio-fawn-seven-7t53f3byt5.vercel.app/)
+🔗 **Live Demo:** https://my-portfolio-gilt-rho-78.vercel.app/
 
 ## Sections
 
