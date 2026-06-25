@@ -1,32 +1,28 @@
-# React + TypeScript + Vite
+# Portfolio — Aniket Ojha
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+Personal portfolio built with **React**, **TypeScript**, **Vite**, **Tailwind CSS v4**, and **Framer Motion**.
 
-Currently, two official plugins are available:
+🔗 **Live Demo:** [my-portfolio-fawn-seven-7t53f3byt5.vercel.app](https://my-portfolio-fawn-seven-7t53f3byt5.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Sections
 
-## React Compiler
+- **About** — Profile, hobbies, tech badges, resume download
+- **Skills** — Languages, AI/ML, Software Dev, Databases, DevOps, Core CS
+- **Projects** — MyDocReader, NewsVerify
+- **Experience** — AWS AI/ML Virtual Intern, ServiceNow Virtual Intern
+- **Education** — Timeline, academic performance chart, semester result PDF viewer
+- **Certifications** — MongoDB, CEH, NVIDIA, Deloitte, etc. with image viewer
+- **Contact** — Email, location, social links
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Run Locally
 
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend enabling type-aware lint rules by installing `oxlint-tsgolint` and editing `.oxlintrc.json`:
-
-```json
-{
-  "$schema": "./node_modules/oxlint/configuration_schema.json",
-  "plugins": ["react", "typescript", "oxc"],
-  "options": {
-    "typeAware": true
-  },
-  "rules": {
-    "react/rules-of-hooks": "error",
-    "react/only-export-components": ["warn", { "allowConstantExport": true }]
-  }
-}
+```bash
+npm install
+npm run dev
 ```
 
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
+## Build
+
+```bash
+npm run build
+```
