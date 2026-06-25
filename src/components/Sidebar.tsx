@@ -25,14 +25,9 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
     <>
       <aside className="hidden h-screen w-64 flex-col border-r border-white/5 bg-card md:flex">
         <div className="flex h-16 items-center border-b border-white/5 px-6">
-          <div className="flex items-center gap-3">
-            <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-gradient-to-br from-primary to-secondary text-[10px] font-bold text-white shadow-lg shadow-primary/25">
-              P
-            </div>
-            <span className="text-lg font-semibold tracking-tight text-white">
-              Portfolio
-            </span>
-          </div>
+          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-xl font-bold tracking-tight text-transparent">
+            Portfolio
+          </span>
         </div>
 
         <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">

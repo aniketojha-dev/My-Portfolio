@@ -18,6 +18,7 @@ const certifications: Certification[] = [
   { title: 'Agentic AI Applications', issuer: 'NVIDIA', image: '/certificates/NVIDIA LLM.png' },
   { title: 'Technology Job Simulation', issuer: 'Deloitte', image: '/certificates/Delloite.png' },
   { title: 'Campus Drive Participation', issuer: 'GrabOn', image: '/certificates/GrabOn.png' },
+  { title: 'AI for Business – AI 101 Fundamentals', issuer: 'Udemy', image: '/certificates/Udemy.png' },
 ];
 
 export default function Certifications() {
