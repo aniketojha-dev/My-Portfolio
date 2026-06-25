@@ -32,7 +32,3 @@ See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rule
 
 ------
 
-Live here : https://my-portfolio-fawn-seven-7t53f3byt5.vercel.app/
-
------
-
