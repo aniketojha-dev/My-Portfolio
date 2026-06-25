@@ -16,7 +16,7 @@ const projects: Project[] = [
     tech: ['Next.js 15', 'TypeScript', 'Tailwind CSS', 'shadcn/ui', 'OpenRouter', 'Groq', 'Transformers.js', 'IndexedDB'],
     gradient: 'from-violet-500/10 to-cyan-500/10',
     github: 'https://github.com/aniketojha-dev/MyDocReader',
-    demo: 'https://my-doc-reader-beige.vercel.app/',
+    demo: 'https://my-doc-reader-seven.vercel.app/',
     tag: 'Featured Project',
   },
   {
