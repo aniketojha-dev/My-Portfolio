@@ -82,38 +82,38 @@ const skillCategories: SkillCategory[] = [
 
 export default function Skills() {
   return (
-    <div className="flex h-full items-center justify-center px-6 py-6 md:px-8 md:py-8">
-      <div className="w-full max-w-5xl">
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>
-          <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-light">Skills & Technologies</span>
+    <>
+      <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.05 }}>
+        <span className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary-light">Skills & Technologies</span>
         </motion.div>
-        <motion.h2 initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.1 }} className="mt-2 text-2xl font-bold text-white">
-          Technical <span className="bg-gradient-to-r from-primary to-secondary bg-clip-text text-transparent">Skills</span>
-        </motion.h2>
-        <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.15 }} className="mt-4 grid gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6">
-          {skillCategories.map((category, idx) => (
-            <motion.div
-              key={category.title}
-              initial={{ opacity: 0, y: 12 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.3, delay: 0.2 + idx * 0.05 }}
-              className="rounded-xl border border-white/5 bg-card p-4 transition-colors hover:border-primary/20"
-            >
-              <h3 className="mb-3 text-[11px] font-semibold uppercase tracking-wider text-gray-500">{category.title}</h3>
-              <div className="space-y-2">
-                {category.skills.map((skill) => (
-                  <div key={skill.name} className="group flex items-center gap-2.5">
-                    <div className="rounded-lg bg-surface p-1.5 transition-colors group-hover:bg-primary/10">
-                      <skill.icon className={`text-base ${skill.color}`} />
-                    </div>
-                    <span className="text-sm font-medium text-gray-300 transition-colors group-hover:text-white">{skill.name}</span>
+        <motion.div
+          initial={{ opacity: 0, y: 16 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.4, delay: 0.1 }}
+          className="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6"
+      >
+        {skillCategories.map((category, idx) => (
+          <motion.div
+            key={category.title}
+            initial={{ opacity: 0, y: 12 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, delay: 0.2 + idx * 0.05 }}
+            className="rounded-xl border border-white/5 bg-card p-5 transition-all hover:border-primary/20 hover:shadow-lg hover:shadow-primary/5 hover:-translate-y-0.5"
+          >
+            <h3 className="mb-4 text-xs font-semibold uppercase tracking-wider text-gray-500">{category.title}</h3>
+            <div className="space-y-2.5">
+              {category.skills.map((skill) => (
+                <div key={skill.name} className="group flex items-center gap-3">
+                  <div className="rounded-lg bg-surface p-1.5 transition-all group-hover:bg-primary/10 group-hover:scale-110">
+                    <skill.icon className={`text-base ${skill.color}`} />
                   </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div>
-      </div>
-    </div>
+                  <span className="text-sm font-medium text-gray-300 transition-all group-hover:text-white">{skill.name}</span>
+                </div>
+              ))}
+            </div>
+          </motion.div>
+        ))}
+      </motion.div>
+    </>
   );
 }

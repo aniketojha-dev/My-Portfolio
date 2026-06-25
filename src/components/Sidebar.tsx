@@ -16,58 +16,19 @@ const navItems = [
   { id: 'contact', label: 'Contact', icon: FiMail },
 ];
 
-const shortLabels: Record<string, string> = {
-  certifications: 'Certs',
-};
-
 export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
   return (
-    <>
-      <aside className="hidden h-screen w-64 flex-col border-r border-white/5 bg-card md:flex">
-        <div className="flex h-16 items-center border-b border-white/5 px-6">
-          <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-xl font-bold tracking-tight text-transparent">
-            Portfolio
-          </span>
-        </div>
+    <div className="flex h-full flex-col">
+      <div className="flex h-16 shrink-0 items-center border-b border-white/5 md:justify-center lg:px-6 lg:justify-start">
+        <span className="bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text font-bold tracking-tight text-transparent md:text-xs lg:text-xl md:hidden lg:block">
+          Portfolio
+        </span>
+        <span className="hidden bg-gradient-to-br from-primary to-secondary bg-clip-text font-bold text-transparent md:block md:text-lg lg:hidden">
+          P
+        </span>
+      </div>
 
-        <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
-          {navItems.map((item) => {
-            const Icon = item.icon;
-            const isActive = activeSection === item.id;
-            return (
-              <button
-                key={item.id}
-                onClick={() => onNavigate(item.id)}
-                className={`flex w-full items-center gap-3 rounded-lg px-4 py-2.5 text-sm font-medium transition-colors ${
-                  isActive
-                    ? 'bg-primary/10 text-primary-light'
-                    : 'text-gray-400 hover:bg-white/5 hover:text-white'
-                }`}
-              >
-                <Icon size={18} />
-                {item.label}
-                {isActive && (
-                  <motion.div
-                    layoutId="sidebar-indicator"
-                    className="ml-auto h-2 w-2 rounded-full bg-primary"
-                    transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
-                  />
-                )}
-              </button>
-            );
-          })}
-        </nav>
-
-        <div className="border-t border-white/5 px-6 py-4">
-          <div className="flex items-center gap-3 text-gray-500">
-            <FiGithub size={18} />
-            <FiLinkedin size={18} />
-          </div>
-          <p className="mt-2 text-xs text-gray-600">&copy; 2026 Aniket Ojha</p>
-        </div>
-      </aside>
-
-      <nav className="fixed bottom-0 left-0 right-0 z-50 flex h-16 items-center justify-around overflow-x-auto border-t border-white/5 bg-card md:hidden">
+      <nav className="flex-1 space-y-1 overflow-y-auto px-3 py-4">
         {navItems.map((item) => {
           const Icon = item.icon;
           const isActive = activeSection === item.id;
@@ -75,16 +36,35 @@ export default function Sidebar({ activeSection, onNavigate }: SidebarProps) {
             <button
               key={item.id}
               onClick={() => onNavigate(item.id)}
-              className={`flex shrink-0 flex-col items-center gap-0.5 px-2.5 py-1 text-[10px] font-medium transition-colors ${
-                isActive ? 'text-primary-light' : 'text-gray-500'
-              }`}
+              className={`flex w-full items-center rounded-lg font-medium transition-all ${
+                isActive
+                  ? 'bg-primary/10 text-primary-light'
+                  : 'text-gray-400 hover:bg-white/5 hover:text-white'
+              } md:justify-center md:px-0 md:py-3 lg:justify-start lg:gap-3 lg:px-4 lg:py-2.5`}
             >
-              <Icon size={18} />
-              {shortLabels[item.id] || item.label}
+              <div className={`flex items-center justify-center md:p-2 lg:p-0 ${isActive ? 'md:bg-primary/10 md:rounded-lg lg:bg-transparent lg:rounded-none' : ''}`}>
+                <Icon size={18} />
+              </div>
+              <span className="md:hidden lg:inline text-sm">{item.label}</span>
+              {isActive && (
+                <motion.div
+                  layoutId="sidebar-indicator"
+                  className="ml-auto h-2 w-2 rounded-full bg-primary md:hidden lg:block"
+                  transition={{ type: 'spring', bounce: 0.2, duration: 0.6 }}
+                />
+              )}
             </button>
           );
         })}
       </nav>
-    </>
+
+      <div className="border-t border-white/5 md:px-0 md:py-4 lg:px-6 lg:py-4">
+        <div className="flex items-center gap-3 text-gray-500 md:justify-center lg:justify-start">
+          <FiGithub size={18} />
+          <FiLinkedin size={18} />
+        </div>
+        <p className="mt-2 text-xs text-gray-600 md:text-center lg:text-left md:hidden lg:block">&copy; 2026 Aniket Ojha</p>
+      </div>
+    </div>
   );
 }
