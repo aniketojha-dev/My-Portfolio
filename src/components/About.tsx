@@ -108,7 +108,7 @@ export default function About() {
           className="mt-4"
         >
           <a
-            href="/resume.pdf"
+            href="/My_Resume.pdf"
             download
             className="inline-block rounded-lg border border-white/10 bg-white/5 px-4 py-2 text-xs font-medium text-gray-300 transition-all hover:border-white/20 hover:text-white hover:shadow-lg hover:shadow-white/5 hover:scale-105 sm:text-sm"
           >
