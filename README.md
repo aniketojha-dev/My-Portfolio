@@ -14,21 +14,5 @@ Personal portfolio built with **React**, **TypeScript**, **Vite**, **Tailwind CS
 - **Certifications** — MongoDB, CEH, NVIDIA, Deloitte, etc. with image viewer
 - **Contact** — Email, location, social links
 
-## Run Locally
-
-```bash
-npm install
-npm run dev
-```
-
-<<<<<<< HEAD
-## Build
-
-```bash
-npm run build
-```
-=======
-See the [Oxlint rules documentation](https://oxc.rs/docs/guide/usage/linter/rules) for the full list of rules and categories.
-
-------
+<p align="center">Built By Aniket Ojha</p>
 
